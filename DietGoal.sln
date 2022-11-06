@@ -9,8 +9,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dietgoal", "dietgoal", "{4A
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{98855520-A5B2-4FE4-9ADC-CFD28BDF295A}"
+	ProjectSection(SolutionItems) = preProject
+		style.css = style.css
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{6F5AAD56-D2A1-478E-A3DF-EB2E6C566AFD}"
+	ProjectSection(SolutionItems) = preProject
+		script.js = script.js
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "image", "image", "{F4A3B080-598D-4BE4-A7F3-F553ED6F31CB}"
 EndProject

@@ -3,9 +3,59 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width-device-width, initial-scale-1.0" />
+
+    <title>Diet Goal - Get in shape!</title>
+
+    <link href="style.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+
+    <script src="script.js"></script>
+
 </head>
 <body>
+    <header>
+        <h1>Diet Goal - Macros calculator</h1>
+    </header>
+    <main>
+        <div class="title">
+            <h2>Basic information</h2>
 
+            <div class="card">
+
+                <div class="lineInput">
+                    <label for="height" class="form-label">Height</label>
+                    <input type="text" class="form-control" id="height" maxlength="3" oninput="bmiCALC" />
+                </div>
+                <div class="lineInput">
+                    <label for="weight" class="form-label">Weight</label>
+                    <input type="text" class="form-control" id="weight" maxlength="3" oninput="bmiCALC" />
+                </div>
+                <div class="lineInput">
+                    <label for="age" class="form-label">Age</label>
+                    <input type="text" class="form-control" id="age" maxlength="3" oninput="bmiCALC" />
+                </div>
+                <form action="#">
+                    <label for="bodytype">Body type</label>
+                    <select name="body" id="bodytype">
+                        <option value="ecto">Ectomorph</option>
+                        <option value="meso">Mesomorph</option>
+                        <option value="endo">Endomorph</option>
+                    </select>
+                </form>
+                <hr>
+                <h2>BMI <span id="bmi"></span></h2>
+            </div>
+        </div>
+
+        <div class="infos">
+            <h2>0</h2>
+        </div>
+
+    </main>
 </body>
 </html>
