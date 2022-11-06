@@ -1,0 +1,9 @@
+{
+  "name": "diet-goal",
+  "version": "0.0.0",
+  "description": "DietGoal",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}
