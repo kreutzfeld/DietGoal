@@ -1,0 +1,3 @@
+# DietGoal
+
+# Macros calculator project
