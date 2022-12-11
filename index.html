@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
@@ -13,10 +14,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
-
     <script src="script.js"></script>
-
 </head>
+
 <body>
     <header>
         <h1>Diet Goal - Macros calculator</h1>
@@ -25,20 +25,19 @@
         <div class="title">
             <h2>Basic information</h2>
 
-            <div class="card">
-
-                <div class="lineInput">
-                    <label for="height" class="form-label">Height</label>
-                    <input type="text" class="form-control" id="height" maxlength="3" oninput="bmiCALC" />
-                </div>
-                <div class="lineInput">
-                    <label for="weight" class="form-label">Weight</label>
-                    <input type="text" class="form-control" id="weight" maxlength="3" oninput="bmiCALC" />
-                </div>
-                <div class="lineInput">
-                    <label for="age" class="form-label">Age</label>
-                    <input type="text" class="form-control" id="age" maxlength="3" oninput="bmiCALC" />
-                </div>
+            <div class="lineInput">
+                <label for="height" class="form-label">Height (cm)</label>
+                <input type="text" class="form-control" id="height" maxlength="3" oninput="bmiCALC" />
+            </div>
+            <div class="lineInput">
+                <label for="weight" class="form-label">Weight (kg)</label>
+                <input type="text" class="form-control" id="weight" maxlength="3" oninput="bmiCALC" />
+            </div>
+            <div class="lineInput">
+                <label for="age" class="form-label">Age</label>
+                <input type="text" class="form-control" id="age" maxlength="3" oninput="bmiCALC" />
+            </div>
+            <div class="dropdown">
                 <form action="#">
                     <label for="bodytype">Body type</label>
                     <select name="body" id="bodytype">
@@ -46,16 +45,46 @@
                         <option value="meso">Mesomorph</option>
                         <option value="endo">Endomorph</option>
                     </select>
+                    <br>
+                    <label for="diettype">Diet type</label>
+                    <select name="diet" id="diettype">
+                        <option value="bulkingdiet">Bulking</option>
+                        <option value="cuttingdiet">Cutting</option>
+                        <option value="keepdiet">Maintence</option>
+                    </select>
                 </form>
-                <hr>
-                <h2>BMI <span id="bmi"></span></h2>
+            </div>
+            <button onclick="bmiCALC(); bulkingCALC(); cuttingCALC(); selectdiet(); ">Calculate it</button>
+        </div>
+        <hr>
+        <div class="report">
+            <div class="quickreport">
+                <h4>BMI: <span id="bmi">0</span></h4>
+            </div>
+            <div class="boxes">
+                <div class="box" id="boxbulking" style="display: none">
+                    <h2>Bulking division</h2>
+                    <h3>Kcal total: <span id="bulkingkcal">0</span></h3>
+                    <h4>Kcal Protein: <span id="bulkingkcalprot">0</span></h4>
+                    <h4>Kcal Carbs: <span id="bulkingkcalcarbs">0</span></h4>
+                    <h4>Kcal Fat: <span id="bulkingkcalfat">0</span></h4>
+                    <h4>Protein daily: <span id="bulkingprotdaily">0</span></h4>
+                    <h4>Carbs daily: <span id="bulkingcarbsdaily">0</span></h4>
+                    <h4>Fat daily: <span id="bulkingfatdaily">0</span></h4>
+                </div>
+                <div class="box" id="boxcutting" style="display: none">
+                    <h2>Cutting division</h2>
+                    <h3>Kcal total: <span id="cuttingkcal">0</span></h3>
+                    <h4>Kcal Protein: <span id="cuttingkcalprot">0</span></h4>
+                    <h4>Kcal Carbs: <span id="cuttingkcalcarbs">0</span></h4>
+                    <h4>Kcal Fat: <span id="cuttingkcalfat">0</span></h4>
+                    <h4>Protein daily: <span id="cuttingprotdaily">0</span></h4>
+                    <h4>Carbs daily: <span id="cuttingcarbsdaily">0</span></h4>
+                    <h4>Fat daily: <span id="cuttingfatdaily">0</span></h4>
+                </div>
             </div>
         </div>
-
-        <div class="infos">
-            <h2>0</h2>
-        </div>
-
     </main>
 </body>
+
 </html>
